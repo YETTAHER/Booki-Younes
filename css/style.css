@@ -236,6 +236,7 @@ i {
   border: 2px solid #d9d9d9;
   padding: 10px 16px 10px 16px;
   border-radius: 25px;
+  width: 160px;
 }
 
 .filtre:hover {
@@ -251,6 +252,17 @@ i {
   display: flex;
   flex-direction: row;
 }
+
+.button {
+  display: flex;
+  gap: 10px;
+}
+
+.button span{
+  white-space: nowrap;
+}
+
+
 
 /* info */
 
@@ -281,18 +293,11 @@ i {
 }
 
 .hebergements-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  gap: 20px; /* Adjust the gap between cards */
 }
 
-.hebergements-cards .card {
-  display: flex;
-  flex-direction: column;
-  margin-top: 33px;
-  width: 250px;
-}
 
 .hebergements-cards img {
   width: 100%;
@@ -537,14 +542,15 @@ ul {
   }
   /***** Filtres **********/
 
+  
   .filtres {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 
-  .filtre {
-    width: 160px;
-    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    align-items: center;
   }
 
   .filtre-section p {
@@ -553,6 +559,10 @@ ul {
 
   .filtre-section {
     flex-direction: column;
+  }
+  
+  .filtre {
+    width: auto;
   }
 
   /***** Info *****/
